@@ -105,7 +105,7 @@
 
 
             <Border BorderThickness="3" BorderBrush="Olive" CornerRadius="20" Padding="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="0" Margin="10">
-                <ListBox x:Name="lstResult" BorderThickness="0"></ListBox>
+                <ListBox x:Name="lstResult" BorderThickness="0" SelectionChanged="LstResult_OnSelectionChanged"></ListBox>
             </Border>
 
             <Button x:Name="btnShowFormattedFile" Content="Open Formatted File" Grid.Row="2" Margin="10" Click="BtnShowFormattedFile_OnClick"></Button>

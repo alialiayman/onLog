@@ -10,3 +10,4 @@ C:\Projects\onLog\bin\Debug\onLog.exe
 C:\Projects\onLog\bin\Debug\onLog.pdb
 C:\Projects\onLog\obj\Debug\onLog.exe
 C:\Projects\onLog\obj\Debug\onLog.pdb
+C:\Projects\onLog\obj\Debug\LogAnalyzer.csprojResolveAssemblyReference.cache

@@ -5,8 +5,10 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 
@@ -23,6 +25,17 @@ namespace onSoft
         {
             InitializeComponent();
             Loaded += CustomWindowChrome_Loaded;
+            Closing += DlgMain_Closing;
+        }
+
+        private void DlgMain_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            var flogs = Directory.GetFiles(".", "flog_*").ToList();
+            foreach (var f in flogs)
+            {
+                File.Delete(f);
+            }
+
         }
 
         private void CustomWindowChrome_Loaded(object sender, RoutedEventArgs e)
@@ -67,7 +80,7 @@ namespace onSoft
                 else
                     _uniqueClassList.Add(className, " Lines " + match.Groups[3]);
             }
-
+            lstResult.Items.Clear();
             foreach (var oneClass in _uniqueClassList)
                 lstResult.Items.Add(oneClass.Key + oneClass.Value);
 
@@ -76,13 +89,20 @@ namespace onSoft
 
         private void BtnShowFormattedFile_OnClick(object sender, RoutedEventArgs e)
         {
-            var formattedFile = dfsInput.Text.Replace(" in ", "\n\tin ").Replace(" at ", "\n\t\tat ");
-            formattedFile = Regex.Replace(formattedFile, "<LogicalOperationStack.*?Serialization\">", "");
-            formattedFile = Regex.Replace(formattedFile, "&amp;#xD;&amp;#xA;", "");
-            var fileName = Guid.NewGuid().ToString();
-            File.WriteAllText(fileName,formattedFile);
+            var formattedOriginal = dfsInput.Text.Replace(" in ", "\n\tin ").Replace(" at ", "\n\t\tat ");
+            var formattedSummary = Regex.Replace(formattedOriginal, "<LogicalOperationStack.*?Serialization\">", "");
+            formattedSummary = Regex.Replace(formattedSummary, "&amp;#xD;&amp;#xA;", "");
+            formattedSummary = Regex.Replace(formattedSummary, @".*?at.*?System\..*?[\r|\n]", "");
+            var fileName = $"flog_{Guid.NewGuid()}";
+            File.WriteAllText(fileName, formattedSummary + "\n\n--------------------------------- Full Log File\n\n--------------------" + formattedOriginal);
             Process.Start(fileName);
 
+        }
+
+
+        private void LstResult_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Clipboard.SetText(lstResult.SelectedItem.ToString());
         }
     }
 }

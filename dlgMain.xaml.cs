@@ -3,6 +3,8 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls.Primitives;
@@ -68,6 +70,19 @@ namespace onSoft
 
             foreach (var oneClass in _uniqueClassList)
                 lstResult.Items.Add(oneClass.Key + oneClass.Value);
+
+
+        }
+
+        private void BtnShowFormattedFile_OnClick(object sender, RoutedEventArgs e)
+        {
+            var formattedFile = dfsInput.Text.Replace(" in ", "\n\tin ").Replace(" at ", "\n\t\tat ");
+            formattedFile = Regex.Replace(formattedFile, "<LogicalOperationStack.*?Serialization\">", "");
+            formattedFile = Regex.Replace(formattedFile, "&amp;#xD;&amp;#xA;", "");
+            var fileName = Guid.NewGuid().ToString();
+            File.WriteAllText(fileName,formattedFile);
+            Process.Start(fileName);
+
         }
     }
 }

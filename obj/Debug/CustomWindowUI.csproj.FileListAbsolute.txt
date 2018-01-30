@@ -1,0 +1,12 @@
+C:\Projects\WPFSamples\Windows\CustomWindowUI\bin\Debug\CustomWindowUI.exe.config
+C:\Projects\WPFSamples\Windows\CustomWindowUI\bin\Debug\CustomWindowUI.exe
+C:\Projects\WPFSamples\Windows\CustomWindowUI\bin\Debug\CustomWindowUI.pdb
+C:\Projects\WPFSamples\Windows\CustomWindowUI\obj\Debug\CustomWindowChrome.baml
+C:\Projects\WPFSamples\Windows\CustomWindowUI\obj\Debug\CustomWindowChrome.g.cs
+C:\Projects\WPFSamples\Windows\CustomWindowUI\obj\Debug\App.g.cs
+C:\Projects\WPFSamples\Windows\CustomWindowUI\obj\Debug\CustomWindowUI_MarkupCompile.cache
+C:\Projects\WPFSamples\Windows\CustomWindowUI\obj\Debug\CustomWindowUI.g.resources
+C:\Projects\WPFSamples\Windows\CustomWindowUI\obj\Debug\CustomWindowUI.Properties.Resources.resources
+C:\Projects\WPFSamples\Windows\CustomWindowUI\obj\Debug\CustomWindowUI.csproj.GenerateResource.Cache
+C:\Projects\WPFSamples\Windows\CustomWindowUI\obj\Debug\CustomWindowUI.exe
+C:\Projects\WPFSamples\Windows\CustomWindowUI\obj\Debug\CustomWindowUI.pdb

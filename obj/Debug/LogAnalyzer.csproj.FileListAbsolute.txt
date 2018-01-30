@@ -1,0 +1,12 @@
+C:\Projects\onLog\obj\Debug\App.g.cs
+C:\Projects\onLog\obj\Debug\LogAnalyzer.csproj.GenerateResource.Cache
+C:\Projects\onLog\bin\Debug\onLog.exe.config
+C:\Projects\onLog\obj\Debug\dlgMain.baml
+C:\Projects\onLog\obj\Debug\dlgMain.g.cs
+C:\Projects\onLog\obj\Debug\onLog_MarkupCompile.cache
+C:\Projects\onLog\obj\Debug\onLog.g.resources
+C:\Projects\onLog\obj\Debug\onSoft.Properties.Resources.resources
+C:\Projects\onLog\bin\Debug\onLog.exe
+C:\Projects\onLog\bin\Debug\onLog.pdb
+C:\Projects\onLog\obj\Debug\onLog.exe
+C:\Projects\onLog\obj\Debug\onLog.pdb

@@ -1,12 +1,7 @@
-# Customized Window UI Sample
-This sample demonstrates how to customize a Window by replacing the non-client area with a rounded border.
+# Simple Log Analyzer
+This program will analyze a simple log for a very specifc case.
+It uses regular expression to parse the log to extract class names and line numbers
 
-## Build the sample
-The easiest way to use these samples without using Git is to download the zip file containing the current version (using the link below or by clicking the "Download ZIP" button on the repo page). You can then unzip the entire archive and use the samples in [Visual Studio 2015](https://www.visualstudio.com/wpf-vs).
+![screenshot](https://user-images.githubusercontent.com/9623964/35583810-f3cd980a-05a7-11e8-9c9d-644799fa7b46.PNG)
 
-### Deploying the sample
-- Select Build > Deploy Solution. 
-
-### Deploying and running the sample
-- To debug the sample and then run it, press F5 or select Debug >  Start Debugging. To run the sample without debugging, press Ctrl+F5 or selectDebug > Start Without Debugging. 
 
